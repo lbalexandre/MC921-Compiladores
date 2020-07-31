@@ -1,0 +1,62 @@
+Program: 
+    FuncDef: 
+        Type: [type(int)]   @ 1:1
+        Decl: ID(name='main',  coord=<uc_ast.Coord object at 0x7fefcce08810>,  type=Type(),  scope=1,  kind='func'  )
+            FuncDecl: 
+                VarDecl: ID(name='main',  coord=<uc_ast.Coord object at 0x7fefcce08810>,  type=Type(),  scope=1,  kind='func'  ), Type(), 
+                    Type: [type(int)]   @ 1:1
+        Compound:    @ 1:1
+            Decl: ID(name='v',  coord=<uc_ast.Coord object at 0x7fefcce08b10>,  type=Type(),  scope=2,  kind='var'  )
+                ArrayDecl: 
+                    VarDecl: ID(name='v',  coord=<uc_ast.Coord object at 0x7fefcce08b10>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                        Type: [type(array), type(int)]   @ 2:5
+                    Constant: Type(), 5
+                InitList:    @ 2:16
+                    Constant: Type(), 1   @ 2:16
+                    Constant: Type(), 2   @ 2:19
+                    Constant: Type(), 3   @ 2:22
+                    Constant: Type(), 4   @ 2:25
+                    Constant: Type(), 5   @ 2:28
+            Decl: ID(name='i',  coord=<uc_ast.Coord object at 0x7fefccddf050>,  type=Type(),  scope=2,  kind='var'  )
+                VarDecl: ID(name='i',  coord=<uc_ast.Coord object at 0x7fefccddf050>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                    Type: [type(int)]   @ 3:5
+                Constant: Type(), 2   @ 3:13
+            Decl: ID(name='c',  coord=<uc_ast.Coord object at 0x7fefccddf290>,  type=Type(),  scope=2,  kind='var'  )
+                ArrayDecl: 
+                    VarDecl: ID(name='c',  coord=<uc_ast.Coord object at 0x7fefccddf290>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                        Type: [type(array), type(char)]   @ 4:5
+                    Constant: Type(), 6
+                Constant: Type(), "xpto"   @ 4:16
+            Decl: ID(name='w',  coord=<uc_ast.Coord object at 0x7fefccddf450>,  type=Type(),  scope=2,  kind='var'  )
+                ArrayDecl: 
+                    VarDecl: ID(name='w',  coord=<uc_ast.Coord object at 0x7fefccddf450>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                        Type: [type(array), type(char)]   @ 5:5
+                    Constant: Type(), 4   @ 5:12
+            Assignment: =   @ 6:5
+                ArrayRef:    @ 6:5
+                    ID: w   @ 6:5
+                    Constant: Type(), 2   @ 6:7
+                ArrayRef:    @ 6:12
+                    ID: c   @ 6:12
+                    Constant: Type(), 1   @ 6:14
+            Assignment: =   @ 7:5
+                ArrayRef:    @ 7:5
+                    ID: v   @ 7:5
+                    ID: i   @ 7:7
+                Constant: Type(), 9   @ 7:12
+            Assert:    @ 8:5
+                BinaryOp: &&   @ 8:12
+                    BinaryOp: ==   @ 8:12
+                        ArrayRef:    @ 8:12
+                            ID: w   @ 8:12
+                            ID: i   @ 8:14
+                        ArrayRef:    @ 8:20
+                            ID: c   @ 8:20
+                            Constant: Type(), 1   @ 8:22
+                    BinaryOp: ==   @ 8:28
+                        ArrayRef:    @ 8:28
+                            ID: v   @ 8:28
+                            ID: i   @ 8:30
+                        Constant: Type(), 9   @ 8:36
+            Return:    @ 9:5
+                Constant: Type(), 0   @ 9:12

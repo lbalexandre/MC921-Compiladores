@@ -1,0 +1,55 @@
+Program: 
+    GlobalDecl: 
+        Decl: ID(name='n',  coord=<uc_ast.Coord object at 0x7f832060a7d0>,  type=Type(),  scope=1,  kind='var'  )
+            VarDecl: ID(name='n',  coord=<uc_ast.Coord object at 0x7f832060a7d0>,  type=Type(),  scope=1,  kind='var'  ), Type(), 
+                Type: [type(int)]   @ 1:1
+            Constant: Type(), 10   @ 1:9
+    FuncDef: 
+        Type: [type(int)]   @ 3:1
+        Decl: ID(name='foo',  coord=<uc_ast.Coord object at 0x7f83205d8d10>,  type=Type(),  scope=1,  kind='func'  )
+            FuncDecl: 
+                ParamList: 
+                    Decl: ID(name='a',  coord=<uc_ast.Coord object at 0x7f83205d8f10>,  type=Type(),  scope=2,  kind='var'  )
+                        VarDecl: ID(name='a',  coord=<uc_ast.Coord object at 0x7f83205d8f10>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                            Type: [type(int)]   @ 3:9
+                    Decl: ID(name='b',  coord=<uc_ast.Coord object at 0x7f83205e0110>,  type=Type(),  scope=2,  kind='var'  )
+                        VarDecl: ID(name='b',  coord=<uc_ast.Coord object at 0x7f83205e0110>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                            Type: [type(int)]   @ 3:16
+                VarDecl: ID(name='foo',  coord=<uc_ast.Coord object at 0x7f83205d8d10>,  type=Type(),  scope=1,  kind='func'  ), Type(), 
+                    Type: [type(int)]   @ 3:1
+        Compound:    @ 3:1
+            Return:    @ 4:5
+                BinaryOp: *   @ 4:12
+                    ID: n   @ 4:12
+                    BinaryOp: +   @ 4:17
+                        ID: a   @ 4:17
+                        ID: b   @ 4:21
+    FuncDef: 
+        Type: [type(int)]   @ 7:1
+        Decl: ID(name='main',  coord=<uc_ast.Coord object at 0x7f83205e0390>,  type=Type(),  scope=1,  kind='func'  )
+            FuncDecl: 
+                VarDecl: ID(name='main',  coord=<uc_ast.Coord object at 0x7f83205e0390>,  type=Type(),  scope=1,  kind='func'  ), Type(), 
+                    Type: [type(int)]   @ 7:1
+        Compound:    @ 7:1
+            Decl: ID(name='c',  coord=<uc_ast.Coord object at 0x7f83205e0590>,  type=Type(),  scope=2,  kind='var'  )
+                VarDecl: ID(name='c',  coord=<uc_ast.Coord object at 0x7f83205e0590>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                    Type: [type(int)]   @ 8:5
+                Constant: Type(), 2   @ 8:13
+            Decl: ID(name='d',  coord=<uc_ast.Coord object at 0x7f83205e0750>,  type=Type(),  scope=2,  kind='var'  )
+                VarDecl: ID(name='d',  coord=<uc_ast.Coord object at 0x7f83205e0750>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                    Type: [type(int)]   @ 8:5
+                Constant: Type(), 3   @ 8:20
+            Decl: ID(name='e',  coord=<uc_ast.Coord object at 0x7f83205e0910>,  type=Type(),  scope=2,  kind='var'  )
+                VarDecl: ID(name='e',  coord=<uc_ast.Coord object at 0x7f83205e0910>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                    Type: [type(int)]   @ 9:5
+                FuncCall:    @ 9:13
+                    ID: foo   @ 9:13
+                    ExprList:    @ 9:17
+                        ID: c   @ 9:17
+                        ID: d   @ 9:20
+            Assert:    @ 10:5
+                BinaryOp: ==   @ 10:12
+                    ID: e   @ 10:12
+                    Constant: Type(), 50   @ 10:17
+            Return:    @ 11:5
+                Constant: Type(), 0   @ 11:12

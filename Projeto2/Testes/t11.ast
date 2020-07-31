@@ -1,0 +1,36 @@
+Program: 
+    FuncDef: 
+        Type: [type(int)]   @ 1:1
+        Decl: ID(name='main',  coord=<uc_ast.Coord object at 0x7feabc032810>,  type=Type(),  scope=1,  kind='func'  )
+            FuncDecl: 
+                VarDecl: ID(name='main',  coord=<uc_ast.Coord object at 0x7feabc032810>,  type=Type(),  scope=1,  kind='func'  ), Type(), 
+                    Type: [type(int)]   @ 1:1
+        Compound:    @ 1:1
+            Decl: ID(name='x',  coord=<uc_ast.Coord object at 0x7feabc032b10>,  type=Type(),  scope=2,  kind='var'  )
+                VarDecl: ID(name='x',  coord=<uc_ast.Coord object at 0x7feabc032b10>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                    Type: [type(int)]   @ 2:5
+                Constant: Type(), 2   @ 2:12
+            Decl: ID(name='y',  coord=<uc_ast.Coord object at 0x7feabc000ed0>,  type=Type(),  scope=2,  kind='var'  )
+                VarDecl: ID(name='y',  coord=<uc_ast.Coord object at 0x7feabc000ed0>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                    Type: [type(int)]   @ 2:5
+            Decl: ID(name='z',  coord=<uc_ast.Coord object at 0x7feabc000d90>,  type=Type(),  scope=2,  kind='var'  )
+                VarDecl: ID(name='z',  coord=<uc_ast.Coord object at 0x7feabc000d90>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                    Type: [type(int)]   @ 2:5
+            Assignment: =   @ 3:5
+                ID: y   @ 3:5
+                UnaryOp: ++   @ 3:11
+                    ID: x   @ 3:11
+            Assignment: =   @ 4:5
+                ID: z   @ 4:5
+                UnaryOp: p++   @ 4:9
+                    ID: x   @ 4:9
+            Assert:    @ 5:5
+                BinaryOp: &&   @ 5:12
+                    BinaryOp: ==   @ 5:12
+                        ID: y   @ 5:12
+                        Constant: Type(), 3   @ 5:17
+                    BinaryOp: ==   @ 5:22
+                        ID: z   @ 5:22
+                        Constant: Type(), 3   @ 5:27
+            Return:    @ 6:5
+                Constant: Type(), 0   @ 6:12

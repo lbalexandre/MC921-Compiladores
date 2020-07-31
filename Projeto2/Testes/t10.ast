@@ -1,0 +1,52 @@
+Program: 
+    FuncDef: 
+        Type: [type(int)]   @ 3:1
+        Decl: ID(name='main',  coord=<uc_ast.Coord object at 0x7f8c27e4a7d0>,  type=Type(),  scope=1,  kind='func'  )
+            FuncDecl: 
+                VarDecl: ID(name='main',  coord=<uc_ast.Coord object at 0x7f8c27e4a7d0>,  type=Type(),  scope=1,  kind='func'  ), Type(), 
+                    Type: [type(int)]   @ 3:1
+        Compound:    @ 3:1
+            Decl: ID(name='n',  coord=<uc_ast.Coord object at 0x7f8c27e4aad0>,  type=Type(),  scope=2,  kind='var'  )
+                VarDecl: ID(name='n',  coord=<uc_ast.Coord object at 0x7f8c27e4aad0>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                    Type: [type(int)]   @ 4:5
+            Decl: ID(name='t',  coord=<uc_ast.Coord object at 0x7f8c27e18d10>,  type=Type(),  scope=2,  kind='var'  )
+                VarDecl: ID(name='t',  coord=<uc_ast.Coord object at 0x7f8c27e18d10>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                    Type: [type(int)]   @ 4:5
+            Decl: ID(name='reverse',  coord=<uc_ast.Coord object at 0x7f8c27e18dd0>,  type=Type(),  scope=2,  kind='var'  )
+                VarDecl: ID(name='reverse',  coord=<uc_ast.Coord object at 0x7f8c27e18dd0>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                    Type: [type(int)]   @ 4:5
+                Constant: Type(), 0   @ 4:24
+            Assignment: =   @ 5:5
+                ID: n   @ 5:5
+                Constant: Type(), 12321   @ 5:9
+            Assignment: =   @ 6:5
+                ID: t   @ 6:5
+                ID: n   @ 6:9
+            While:    @ 7:5
+                BinaryOp: !=   @ 7:12
+                    ID: t   @ 7:12
+                    Constant: Type(), 0   @ 7:17
+                Compound:    @ 7:1
+                    Assignment: =   @ 8:9
+                        ID: reverse   @ 8:9
+                        BinaryOp: *   @ 8:19
+                            ID: reverse   @ 8:19
+                            Constant: Type(), 10   @ 8:29
+                    Assignment: =   @ 9:9
+                        ID: reverse   @ 9:9
+                        BinaryOp: +   @ 9:19
+                            ID: reverse   @ 9:19
+                            BinaryOp: %   @ 9:29
+                                ID: t   @ 9:29
+                                Constant: Type(), 10   @ 9:33
+                    Assignment: =   @ 10:9
+                        ID: t   @ 10:9
+                        BinaryOp: /   @ 10:13
+                            ID: t   @ 10:13
+                            Constant: Type(), 10   @ 10:17
+            Assert:    @ 12:5
+                BinaryOp: ==   @ 12:12
+                    ID: n   @ 12:12
+                    ID: reverse   @ 12:17
+            Return:    @ 13:5
+                Constant: Type(), 0   @ 13:12

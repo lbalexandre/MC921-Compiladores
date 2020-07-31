@@ -1,0 +1,45 @@
+Program: 
+    FuncDef: 
+        Type: [type(int)]   @ 1:1
+        Decl: ID(name='fat',  coord=<uc_ast.Coord object at 0x7f6dda0dd7d0>,  type=Type(),  scope=1,  kind='func'  )
+            FuncDecl: 
+                ParamList: 
+                    Decl: ID(name='n',  coord=<uc_ast.Coord object at 0x7f6dda0ddb90>,  type=Type(),  scope=2,  kind='var'  )
+                        VarDecl: ID(name='n',  coord=<uc_ast.Coord object at 0x7f6dda0ddb90>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                            Type: [type(int)]   @ 1:9
+                VarDecl: ID(name='fat',  coord=<uc_ast.Coord object at 0x7f6dda0dd7d0>,  type=Type(),  scope=1,  kind='func'  ), Type(), 
+                    Type: [type(int)]   @ 1:1
+        Compound:    @ 1:1
+            If:    @ 2:5
+                BinaryOp: <=   @ 2:9
+                    ID: n   @ 2:9
+                    Constant: Type(), 1   @ 2:14
+                Return:    @ 3:9
+                    Constant: Type(), 1   @ 3:16
+                Return:    @ 5:9
+                    BinaryOp: *   @ 5:16
+                        ID: n   @ 5:16
+                        FuncCall:    @ 5:20
+                            ID: fat   @ 5:20
+                            BinaryOp: -   @ 5:24
+                                ID: n   @ 5:24
+                                Constant: Type(), 1   @ 5:26
+    FuncDef: 
+        Type: [type(int)]   @ 8:1
+        Decl: ID(name='main',  coord=<uc_ast.Coord object at 0x7f6dda0b3410>,  type=Type(),  scope=1,  kind='func'  )
+            FuncDecl: 
+                VarDecl: ID(name='main',  coord=<uc_ast.Coord object at 0x7f6dda0b3410>,  type=Type(),  scope=1,  kind='func'  ), Type(), 
+                    Type: [type(int)]   @ 8:1
+        Compound:    @ 8:1
+            Decl: ID(name='x',  coord=<uc_ast.Coord object at 0x7f6dda0b3190>,  type=Type(),  scope=2,  kind='var'  )
+                VarDecl: ID(name='x',  coord=<uc_ast.Coord object at 0x7f6dda0b3190>,  type=Type(),  scope=2,  kind='var'  ), Type(), 
+                    Type: [type(int)]   @ 9:5
+                Constant: Type(), 7   @ 9:13
+            Assert:    @ 10:5
+                BinaryOp: ==   @ 10:12
+                    FuncCall:    @ 10:12
+                        ID: fat   @ 10:12
+                        ID: x   @ 10:16
+                    Constant: Type(), 5040   @ 10:22
+            Return:    @ 11:5
+                Constant: Type(), 0   @ 11:12
