@@ -9,7 +9,7 @@ While you don’t need to be a Python wizard to complete the task, you should fe
 
 This task will revolve around several programming projects that taken together form a complete working compiler. You will learn how to put into practice the techniques presented in the theoretical part of this course and will study most of the details involved in the implementation of a "real" compiler.
 
-##First Project
+## First Project
 The first project requires you to implement a scanner, and a parser for the uC language, specified by uC BNF Grammar notebook. Study the specification of uC grammar carefully. To complete this first project, you will use the PLY, a Python version of the lex/yacc toolset with same functionality but with a friendlier interface. Details about this project are in the First Project notebook.
 
 ## Second Project
